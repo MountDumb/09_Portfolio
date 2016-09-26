@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+// System.Collections.Generic so we can use Lists.
+using System.Collections.Generic;
 
 namespace _09_Portfolio
 {
@@ -46,12 +48,18 @@ namespace _09_Portfolio
         public void PolymorphismArray()
         {
             SavingsAccount cd = new SavingsAccount("Account 55555", 1000, 3.2);
-
-            IAsset[] portfolio = new IAsset[3];
-            portfolio[0] = stockHP;
-            portfolio[1] = stockIBM;
-            portfolio[2] = cd;
-            Assert.AreEqual(9809.1, Stock.TotalValue(portfolio));
+                       
+            //changed array to List due to refactoring.
+            //IAsset[] portfolio = new IAsset[3];
+            //portfolio[0] = stockHP;
+            //portfolio[1] = stockIBM;
+            //portfolio[2] = cd;
+            List<IAsset> portfolio = new List<IAsset>();
+            portfolio.Add(stockHP);
+            portfolio.Add(stockIBM);
+            portfolio.Add(cd);
+            //Assert.AreEqual(9809.1, Portfolio.TotalValue(stocks)); 
+            Assert.AreEqual(9809.1, new Portfolio(portfolio).GetTotalValue());
         }
 
 

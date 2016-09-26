@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+// System.Collections.Generic so we can use Lists.
+using System.Collections.Generic;
 
 namespace _09_Portfolio
 {
@@ -67,14 +69,18 @@ namespace _09_Portfolio
         [TestMethod]
         public void CanCalculateTotalValue()
         {
-            Stock stockHP = new Stock("HPQ", 60.03, 120);
-            Stock stockIBM = new Stock("IBM", 32.11, 50);
+            IAsset stockHP = new Stock("HPQ", 60.03, 120);
+            IAsset stockIBM = new Stock("IBM", 32.11, 50);
 
-            Stock[] stocks = new Stock[2];
-            stocks[0] = stockHP;
-            stocks[1] = stockIBM;
-
-            Assert.AreEqual(8809.1, Stock.TotalValue(stocks));
+            //changed array to List and Stock to IAsset due to refactoring
+            //Stock[] stocks = new Stock[2];
+            //stocks[0] = stockHP;
+            //stocks[1] = stockIBM;
+            List<IAsset> stocks = new List<IAsset>();
+            stocks.Add(stockHP);
+            stocks.Add(stockIBM);
+            //Assert.AreEqual(8809.1, Portfolio.TotalValue(stocks));
+            Assert.AreEqual(8809.1, new Portfolio(stocks).GetTotalValue());
         }
 
         [TestMethod]

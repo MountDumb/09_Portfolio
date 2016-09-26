@@ -27,6 +27,13 @@ namespace _09_Portfolio
             return totalvalue;
         }
 
+        //gone due to refactoring.
+        //public static double TotalValue(List<IAsset> assets)
+        //{
+        //    return new Portfolio(assets).GetTotalValue();
+
+        //}
+
         public void AddAsset(IAsset ass)
         {
             this.portlist.Add(ass);
