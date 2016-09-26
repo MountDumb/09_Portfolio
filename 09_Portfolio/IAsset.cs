@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _09_Portfolio
 {
-    interface IAsset
+    public interface IAsset
     {
         double GetValue();
     }

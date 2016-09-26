@@ -53,6 +53,7 @@
     <Compile Include="IAsset.cs" />
     <Compile Include="PolyMorphismTests.cs" />
     <Compile Include="PortFolioTests.cs" />
+    <Compile Include="SavingsAccount.cs" />
     <Compile Include="Stock.cs" />
     <Compile Include="StockTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

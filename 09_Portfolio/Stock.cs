@@ -27,10 +27,10 @@ namespace _09_Portfolio
             return pricepershare * numshares;
         }
 
-        public static double TotalValue(Stock[] stocks)
+        public static double TotalValue(IAsset[] stocks)
         {
             double sumvalue = 0;
-            foreach (var stock in stocks)
+            foreach (IAsset stock in stocks)
             {
                 sumvalue += stock.GetValue();
             }
