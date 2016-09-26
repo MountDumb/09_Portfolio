@@ -58,7 +58,7 @@ namespace _09_Portfolio
             portfolio.Add(stockHP);
             portfolio.Add(stockIBM);
             portfolio.Add(cd);
-            //Assert.AreEqual(9809.1, Portfolio.TotalValue(stocks)); 
+            //Assert.AreEqual(9809.1, Portfolio.TotalValue(portfolio)); 
             Assert.AreEqual(9809.1, new Portfolio(portfolio).GetTotalValue());
         }
 
