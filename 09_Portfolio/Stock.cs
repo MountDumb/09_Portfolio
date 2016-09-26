@@ -57,6 +57,11 @@ namespace _09_Portfolio
             { return false; }
         }
 
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
         //Properties
 
         public string Symbol

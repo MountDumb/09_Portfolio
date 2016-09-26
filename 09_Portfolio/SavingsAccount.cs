@@ -24,12 +24,13 @@ namespace _09_Portfolio
 
         public override string ToString()
         {
-            //"SavingsAccount[value=1000.0,interestRate=4.2]"
-            string s = string.Format("{0:0.0}", balance);
-            string stringbalance = s.Replace(',', '.');
+            //string s = string.Format("{0:0.0}", balance);
+            //string stringbalance = s.Replace(',', '.');
+            string stringbalance = balance.ToString("0.0", CultureInfo.InvariantCulture);
 
-            string i = string.Format("{0:0.0}", interestrate);
-            string irate = i.Replace(',','.');
+            //string i = string.Format("{0:0.0}", interestrate);
+            //string irate = i.Replace(',','.');
+            string irate = interestrate.ToString("0.0", CultureInfo.InvariantCulture);
 
             return "SavingsAccount[value=" 
                 + stringbalance + ",interestRate=" + irate + "]";
