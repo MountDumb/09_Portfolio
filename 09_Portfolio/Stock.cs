@@ -47,8 +47,9 @@ namespace _09_Portfolio
                 + ppsstring + ",numShares=" + this.numshares + "]";
         }
 
-        public bool Equals(Stock s)
+        public override bool Equals(object obj)
         {
+            Stock s = (Stock)obj;
             if (this.symbol == s.Symbol && this.pricepershare == s.PricePerShare 
                 && this.numshares == s.NumShares)
             { return true; }

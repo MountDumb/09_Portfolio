@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="IAsset.cs" />
     <Compile Include="PolyMorphismTests.cs" />
+    <Compile Include="Portfolio.cs" />
     <Compile Include="PortFolioTests.cs" />
     <Compile Include="SavingsAccount.cs" />
     <Compile Include="Stock.cs" />
