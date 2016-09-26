@@ -19,9 +19,9 @@ namespace _09_Portfolio
         public double GetTotalValue()
         {
             double totalvalue = 0;
-            foreach (var item in portlist)
+            for (int i = 0; i < portlist.Count; i++)
             {
-                totalvalue += item.GetValue();
+                totalvalue += portlist[i].GetValue();
             }
 
             return totalvalue;
