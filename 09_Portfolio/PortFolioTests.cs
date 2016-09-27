@@ -24,8 +24,7 @@ namespace _09_Portfolio
             List<IAsset> stocks = new List<IAsset>();
             stocks.Add(stockHP);
             stocks.Add(stockIBM);
-            Portfolio portfolio = new Portfolio(stocks);
-            Assert.AreEqual(8809.1, portfolio.GetTotalValue());
+            Assert.AreEqual(8809.1, new Portfolio(stocks).GetTotalValue());
         }
 
         [TestMethod]
